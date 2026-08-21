@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AI-Based Laryngeal Cancer Screening using Voice and Image Analysis — early screening support powered by machine learning."
+    />
+    <title>AI Laryngeal Screening | Final Year Project</title>
+    <link rel="icon" type="image/png" href="assets/app-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="container nav">
+        <a class="brand" href="#top" aria-label="AI Laryngeal Screening home">
+          <img src="assets/app-logo.png" alt="Project logo" class="brand-logo" />
+          <span class="brand-text">
+            <strong>AI Laryngeal Screening</strong>
+            <small>Voice &amp; Image Analysis</small>
+          </span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="#about">About</a>
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#tech">Technology</a>
+          <a href="mailto:habdulrehman215@gmail.com" class="btn btn-sm">Email us</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow animate-in">Final Year Project · Early Screening Support</p>
+            <h1 class="animate-in delay-1">
+              AI-Based Laryngeal<br />
+              Cancer Screening
+            </h1>
+            <p class="hero-lead animate-in delay-2">
+              A research-grade mobile platform that combines
+              <strong>voice analysis</strong> and
+              <strong>image classification</strong> to support early laryngeal
+              health screening — with clear risk scores, not a medical diagnosis.
+            </p>
+            <div class="hero-actions animate-in delay-3">
+              <a href="#features" class="btn">Explore Features</a>
+              <a href="#how-it-works" class="btn btn-outline">See How It Works</a>
+            </div>
+            <div class="hero-stats animate-in delay-4">
+              <div>
+                <strong>2</strong>
+                <span>AI modalities</span>
+              </div>
+              <div>
+                <strong>0–100</strong>
+                <span>Risk score</span>
+              </div>
+              <div>
+                <strong>ML + DL</strong>
+                <span>AI-powered screening</span>
+              </div>
+            </div>
+            <p class="developed-by animate-in delay-5">
+              Developed by <strong>Abdul Rehman</strong> and
+              <strong>Muhammad Rafay</strong>
+            </p>
+          </div>
+          <div class="hero-visual reveal">
+            <div class="hero-card">
+              <img
+                src="assets/pain.png"
+                alt="Illustration of throat discomfort highlighting laryngeal screening focus"
+                class="hero-illustration"
+              />
+              <div class="hero-badge">
+                <img src="assets/app-logo.png" alt="" />
+                <div>
+                  <span>SYSTEM READY</span>
+                  <small>v1.0.0 · Screening support</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="container about-grid">
+          <div class="about-copy reveal">
+            <p class="eyebrow">Clinical context</p>
+            <h2>Smarter support for early laryngeal screening</h2>
+            <p>
+              Laryngeal cancer outcomes improve when warning signs are noticed
+              earlier. Our Final Year Project explores
+              <strong>AI-assisted screening</strong> that analyzes voice
+              characteristics and visual tissue patterns, then returns an
+              interpretable risk score to guide further clinical attention.
+            </p>
+            <p>
+              Both modalities use machine learning and deep learning models.
+              Results are for research, education, and triage support — always
+              follow clinical workflows and regulations.
+            </p>
+            <ul class="checklist">
+              <li>Voice feature analysis with live-style waveform recording</li>
+              <li>EfficientNet-based laryngeal image classification</li>
+              <li>Unified Low / Medium / High risk bands with score dashboards</li>
+              <li>Secure accounts, guest mode, and screening history</li>
+            </ul>
+          </div>
+
+          <div class="about-panel reveal">
+            <div class="panel-item">
+              <span class="panel-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3Z" />
+                  <path d="M19 10v1a7 7 0 0 1-14 0v-1" />
+                  <path d="M12 18v3" />
+                  <path d="M8 21h8" />
+                </svg>
+              </span>
+              <div>
+                <h3>Voice modality</h3>
+                <p>Record or upload audio, capture lifestyle factors, and receive a screening score out of 100.</p>
+              </div>
+            </div>
+            <div class="panel-item">
+              <span class="panel-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <rect x="3" y="5" width="18" height="14" rx="2" />
+                  <circle cx="8.5" cy="10.5" r="1.5" />
+                  <path d="m21 16-4.5-4.5L9 19" />
+                </svg>
+              </span>
+              <div>
+                <h3>Image modality</h3>
+                <p>Upload a laryngeal image for tissue-class prediction, confidence, and plain-language guidance.</p>
+              </div>
+            </div>
+            <div class="panel-item">
+              <span class="panel-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M4 19V9" />
+                  <path d="M10 19V5" />
+                  <path d="M16 19v-7" />
+                  <path d="M22 19V8" />
+                </svg>
+              </span>
+              <div>
+                <h3>Dashboard history</h3>
+                <p>Track past voice and image screenings by day and month with calendar-based filters.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section features" id="features">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Product features</p>
+            <h2>Everything your screening workflow needs</h2>
+            <p>
+              Built as a polished Expo mobile app with the same maroon and soft-rose
+              theme you see here — designed for clarity, trust, and clinical focus.
+            </p>
+          </div>
+
+          <article class="feature-row reveal">
+            <div class="feature-copy">
+              <span class="feature-tag">01 · Voice Analysis</span>
+              <h3>Record, upload, and score voice samples</h3>
+              <p>
+                Capture audio with a live-style waveform, or upload an existing
+                sample. Add optional clinical context such as gender, smoking,
+                alcohol, and occupation, then run AI voice analysis for a
+                screening score.
+              </p>
+              <ul>
+                <li>Microphone recording with waveform feedback</li>
+                <li>Audio file upload support</li>
+                <li>Risk score dashboard (0–100)</li>
+                <li>Clear Low / Medium / High risk bands</li>
+              </ul>
+            </div>
+            <div class="feature-media">
+              <img
+                src="assets/feature-voice.png"
+                alt="Voice analysis feature showing waveform and risk score on a phone mockup"
+              />
+            </div>
+          </article>
+
+          <article class="feature-row reverse reveal">
+            <div class="feature-copy">
+              <span class="feature-tag">02 · Image Analysis</span>
+              <h3>Classify laryngeal images with deep learning</h3>
+              <p>
+                Upload a close-up laryngeal image and analyze it with an
+                EfficientNet tissue classifier. The app returns class labels,
+                confidence, risk band, and simple next-step language for users.
+              </p>
+              <ul>
+                <li>Photo library or camera upload</li>
+                <li>Classes such as healthy tissue, vessels, loops, and white patches</li>
+                <li>Confidence-aware “not tissue” safeguards</li>
+                <li>Plain-language explanations for screening results</li>
+              </ul>
+            </div>
+            <div class="feature-media">
+              <img
+                src="assets/feature-image.png"
+                alt="Image analysis feature showing AI scan results on a phone mockup"
+              />
+            </div>
+          </article>
+
+          <article class="feature-row reveal">
+            <div class="feature-copy">
+              <span class="feature-tag">03 · Dashboard</span>
+              <h3>Review screening history at a glance</h3>
+              <p>
+                The dashboard stores recent voice and image analyses so users can
+                revisit scores over time. Filter by calendar day or month and
+                keep a clear record of past screening activity.
+              </p>
+              <ul>
+                <li>Calendar-based history filters</li>
+                <li>Voice and image result cards</li>
+                <li>Low / Medium / High risk indicators</li>
+                <li>Account-linked screening timeline</li>
+              </ul>
+            </div>
+            <div class="feature-media">
+              <img
+                src="assets/feature-dashboard.png"
+                alt="Dashboard feature showing screening history and risk charts"
+              />
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section cards-section" id="more-features">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Also included</p>
+            <h2>Secure access and clear insights</h2>
+          </div>
+          <div class="card-grid">
+            <article class="info-card reveal">
+              <div class="info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <rect x="5" y="11" width="14" height="10" rx="2" />
+                  <path d="M8 11V8a4 4 0 0 1 8 0v3" />
+                </svg>
+              </div>
+              <h3>Accounts &amp; profile</h3>
+              <p>
+                Sign in, sign up, guest mode, password reset, and a dedicated
+                profile screen for account management.
+              </p>
+            </article>
+            <article class="info-card reveal">
+              <div class="info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M4 19h16" />
+                  <path d="M7 16V9" />
+                  <path d="M12 16V5" />
+                  <path d="M17 16v-4" />
+                </svg>
+              </div>
+              <h3>Score dashboards</h3>
+              <p>
+                Circular risk gauges and color bands make Low, Medium, and High
+                screening outcomes easy to understand at a glance.
+              </p>
+            </article>
+            <article class="info-card reveal">
+              <div class="info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M12 3v3" />
+                  <path d="M12 18v3" />
+                  <path d="M5 8l2 2" />
+                  <path d="M17 14l2 2" />
+                  <path d="M3 12h3" />
+                  <path d="M18 12h3" />
+                  <circle cx="12" cy="12" r="4" />
+                </svg>
+              </div>
+              <h3>AI model pipeline</h3>
+              <p>
+                Voice machine learning and image deep learning work together to
+                deliver clear screening scores and risk bands.
+              </p>
+            </article>
+            <article class="info-card reveal">
+              <div class="info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M12 3 4 7v5c0 5 3.5 8.5 8 9 4.5-.5 8-4 8-9V7l-8-4Z" />
+                  <path d="m9 12 2 2 4-4" />
+                </svg>
+              </div>
+              <h3>Secure Firebase auth</h3>
+              <p>
+                Authentication and screening history are managed securely so
+                users can revisit results with confidence.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section how" id="how-it-works">
+        <div class="container">
+          <div class="section-head light reveal">
+            <p class="eyebrow">Workflow</p>
+            <h2>How the app screens in three steps</h2>
+          </div>
+          <div class="steps">
+            <article class="step reveal">
+              <span class="step-num">1</span>
+              <h3>Capture</h3>
+              <p>Record a voice sample or upload a laryngeal image from the device.</p>
+            </article>
+            <article class="step reveal">
+              <span class="step-num">2</span>
+              <h3>Analyze</h3>
+              <p>ML and DL models extract features and return class, confidence, and risk.</p>
+            </article>
+            <article class="step reveal">
+              <span class="step-num">3</span>
+              <h3>Review</h3>
+              <p>View the score dashboard, plain-language notes, and save history for later.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tech" id="tech">
+        <div class="container tech-grid reveal">
+          <div>
+            <p class="eyebrow">Technology stack</p>
+            <h2>Built for research demos that feel production-ready</h2>
+            <p>
+              The mobile client is an Expo React Native app. Voice machine-learning
+              and image deep-learning models power screening, while Firebase
+              handles authentication and screening history.
+            </p>
+          </div>
+          <div class="tech-chips">
+            <span>Expo / React Native</span>
+            <span>Firebase Auth</span>
+            <span>Firestore</span>
+            <span>Voice ML</span>
+            <span>Image DL</span>
+            <span>EfficientNet</span>
+            <span>Risk scoring</span>
+            <span>AI screening</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section disclaimer">
+        <div class="container">
+          <div class="disclaimer-box reveal">
+            <div class="disclaimer-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 8v5" />
+                <path d="M12 16h.01" />
+              </svg>
+            </div>
+            <div>
+              <h2>Important disclaimer</h2>
+              <p>
+                This project provides <strong>AI-assisted screening support</strong>
+                only. It is <strong>not</strong> a medical diagnosis, treatment
+                recommendation, or substitute for clinical examination. Always
+                consult qualified healthcare professionals and follow
+                regulations and clinical workflows.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <img src="assets/app-logo.png" alt="Project logo" />
+          <div>
+            <strong>AI Laryngeal Screening</strong>
+            <p>Developed by Abdul Rehman and Muhammad Rafay</p>
+          </div>
+        </div>
+        <p class="footer-copy">
+          © <span id="year"></span> Final Year Project.
+          <a href="mailto:habdulrehman215@gmail.com">habdulrehman215@gmail.com</a>
+        </p>
+      </div>
+    </footer>
+
+    <button type="button" class="back-to-top" id="floatingTop" aria-label="Back to top">
+      ↑
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
