@@ -37,7 +37,37 @@
           <a href="#features">Features</a>
           <a href="#how-it-works">How it works</a>
           <a href="#tech">Technology</a>
-          <a href="mailto:habdulrehman215@gmail.com" class="btn btn-sm">Email us</a>
+          <div class="email-menu" id="emailMenu">
+            <button
+              type="button"
+              class="btn btn-sm"
+              id="emailToggle"
+              aria-expanded="false"
+              aria-haspopup="true"
+            >
+              Email us
+            </button>
+            <div class="email-options" id="emailOptions" role="menu" hidden>
+              <button
+                type="button"
+                role="menuitem"
+                class="email-person"
+                data-email="habdulrehman215@gmail.com"
+                data-name="Abdul Rehman Nadeem"
+              >
+                Abdul Rehman Nadeem
+              </button>
+              <button
+                type="button"
+                role="menuitem"
+                class="email-person"
+                data-email="mrafayhassan26@gmail.com"
+                data-name="Muhammad Rafay"
+              >
+                Muhammad Rafay
+              </button>
+            </div>
+          </div>
         </nav>
       </div>
     </header>

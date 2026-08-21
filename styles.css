@@ -205,6 +205,52 @@ p {
   color: var(--heading);
 }
 
+.email-menu {
+  position: relative;
+}
+
+.email-options {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  min-width: 240px;
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.45rem;
+  background: #fff;
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  z-index: 60;
+}
+
+.email-options[hidden] {
+  display: none;
+}
+
+.email-options a,
+.email-options .email-person {
+  display: block;
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--heading);
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: left;
+  cursor: pointer;
+}
+
+.email-options a:hover,
+.email-options .email-person:hover {
+  background: #fff0f4;
+  color: var(--heading);
+}
+
 .nav-toggle {
   display: none;
   width: 42px;
@@ -891,7 +937,7 @@ p {
   }
 
   .hero-card {
-    width: min(100%, 360px);
+    width: min(100%, 280px);
   }
 }
 
@@ -991,6 +1037,26 @@ p {
     background: #fff0f4;
   }
 
+  .email-menu {
+    width: 100%;
+  }
+
+  .email-menu .btn {
+    width: 100%;
+  }
+
+  .email-options {
+    position: static;
+    min-width: 0;
+    margin-top: 0.35rem;
+    box-shadow: none;
+  }
+
+  .hero-lead {
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+
   .hero-stats {
     grid-template-columns: 1fr;
     max-width: none;
@@ -1031,13 +1097,14 @@ p {
 
   .hero-card {
     width: 100%;
-    max-width: 300px;
-    border-radius: 20px;
-    padding: 1rem 0.9rem 0.9rem;
+    max-width: 220px;
+    border-radius: 18px;
+    padding: 0.75rem 0.7rem 0.7rem;
   }
 
   .hero-illustration {
-    width: 68%;
+    width: 58%;
+    margin-bottom: 0.75rem;
   }
 
   .hero-badge {

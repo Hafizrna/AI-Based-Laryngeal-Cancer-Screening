@@ -3,9 +3,51 @@ const navLinks = document.getElementById("navLinks");
 const year = document.getElementById("year");
 const floatingTop = document.getElementById("floatingTop");
 const header = document.querySelector(".site-header");
+const emailMenu = document.getElementById("emailMenu");
+const emailToggle = document.getElementById("emailToggle");
+const emailOptions = document.getElementById("emailOptions");
 
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function closeEmailMenu() {
+  if (!emailToggle || !emailOptions) return;
+  emailOptions.hidden = true;
+  emailToggle.setAttribute("aria-expanded", "false");
+}
+
+function toggleEmailMenu() {
+  if (!emailToggle || !emailOptions) return;
+  const open = emailOptions.hidden;
+  emailOptions.hidden = !open;
+  emailToggle.setAttribute("aria-expanded", open ? "true" : "false");
+}
+
+function closeMobileNav() {
+  if (!navLinks || !navToggle) return;
+  navLinks.classList.remove("open");
+  navToggle.setAttribute("aria-expanded", "false");
+  navToggle.setAttribute("aria-label", "Open menu");
+}
+
+function openEmailCompose(email) {
+  const subject = encodeURIComponent("AI Laryngeal Screening inquiry");
+  const body = encodeURIComponent("Hello,\n\n");
+
+  // Opens Gmail compose in a new tab (works even without Outlook/Mail app)
+  const gmailUrl =
+    `https://mail.google.com/mail/?view=cm&fs=1` +
+    `&to=${encodeURIComponent(email)}` +
+    `&su=${subject}` +
+    `&body=${body}`;
+
+  const opened = window.open(gmailUrl, "_blank", "noopener,noreferrer");
+
+  // Fallback for browsers that block popups
+  if (!opened) {
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+  }
 }
 
 if (year) {
@@ -17,16 +59,47 @@ if (navToggle && navLinks) {
     const open = navLinks.classList.toggle("open");
     navToggle.setAttribute("aria-expanded", open ? "true" : "false");
     navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    if (!open) closeEmailMenu();
   });
 
-  navLinks.querySelectorAll("a").forEach((link) => {
+  navLinks.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener("click", () => {
-      navLinks.classList.remove("open");
-      navToggle.setAttribute("aria-expanded", "false");
-      navToggle.setAttribute("aria-label", "Open menu");
+      closeMobileNav();
+      closeEmailMenu();
     });
   });
 }
+
+if (emailToggle) {
+  emailToggle.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    toggleEmailMenu();
+  });
+}
+
+document.querySelectorAll(".email-person").forEach((btn) => {
+  btn.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    const email = btn.getAttribute("data-email");
+    if (!email) return;
+
+    openEmailCompose(email);
+    closeEmailMenu();
+    closeMobileNav();
+  });
+});
+
+document.addEventListener("click", (event) => {
+  if (!emailMenu || emailMenu.contains(event.target)) return;
+  closeEmailMenu();
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeEmailMenu();
+});
 
 if (floatingTop) {
   floatingTop.addEventListener("click", scrollToTop);
