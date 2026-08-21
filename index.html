@@ -46,7 +46,7 @@
       <section class="hero">
         <div class="hero-glow" aria-hidden="true"></div>
         <div class="container hero-grid">
-          <div class="hero-copy">
+          <div class="hero-intro">
             <p class="eyebrow animate-in">Final Year Project · Early Screening Support</p>
             <h1 class="animate-in delay-1">
               AI-Based Laryngeal<br />
@@ -58,29 +58,13 @@
               <strong>image classification</strong> to support early laryngeal
               health screening — with clear risk scores, not a medical diagnosis.
             </p>
-            <div class="hero-actions animate-in delay-3">
-              <a href="#features" class="btn">Explore Features</a>
-              <a href="#how-it-works" class="btn btn-outline">See How It Works</a>
-            </div>
-            <div class="hero-stats animate-in delay-4">
-              <div>
-                <strong>2</strong>
-                <span>AI modalities</span>
-              </div>
-              <div>
-                <strong>0–100</strong>
-                <span>Risk score</span>
-              </div>
-              <div>
-                <strong>ML + DL</strong>
-                <span>AI-powered screening</span>
-              </div>
-            </div>
-            <p class="developed-by animate-in delay-5">
-              Developed by <strong>Abdul Rehman</strong> and
-              <strong>Muhammad Rafay</strong>
-            </p>
           </div>
+
+          <div class="hero-actions animate-in delay-3">
+            <a href="#features" class="btn">Explore Features</a>
+            <a href="#how-it-works" class="btn btn-outline">See How It Works</a>
+          </div>
+
           <div class="hero-visual reveal">
             <div class="hero-card">
               <img
@@ -96,6 +80,27 @@
                 </div>
               </div>
             </div>
+          </div>
+
+          <div class="hero-meta animate-in delay-4">
+            <div class="hero-stats">
+              <div>
+                <strong>2</strong>
+                <span>AI modalities</span>
+              </div>
+              <div>
+                <strong>0–100</strong>
+                <span>Risk score</span>
+              </div>
+              <div>
+                <strong>ML + DL</strong>
+                <span>AI-powered screening</span>
+              </div>
+            </div>
+            <p class="developed-by">
+              Developed by <strong>Abdul Rehman</strong> and
+              <strong>Muhammad Rafay</strong>
+            </p>
           </div>
         </div>
       </section>
@@ -354,25 +359,65 @@
       </section>
 
       <section class="section tech" id="tech">
-        <div class="container tech-grid reveal">
-          <div>
+        <div class="container">
+          <div class="section-head reveal">
             <p class="eyebrow">Technology stack</p>
-            <h2>Built for research demos that feel production-ready</h2>
+            <h2>The tools behind the screening pipeline</h2>
             <p>
-              The mobile client is an Expo React Native app. Voice machine-learning
-              and image deep-learning models power screening, while Firebase
-              handles authentication and screening history.
+              A mobile Expo client talks to Python APIs: classic ML for voice
+              screening and TensorFlow EfficientNetB0 for laryngeal image
+              classification, with Firebase for accounts and history.
             </p>
           </div>
-          <div class="tech-chips">
-            <span>Expo / React Native</span>
-            <span>Firebase Auth</span>
-            <span>Firestore</span>
-            <span>Voice ML</span>
-            <span>Image DL</span>
-            <span>EfficientNet</span>
-            <span>Risk scoring</span>
-            <span>AI screening</span>
+
+          <div class="tech-groups">
+            <article class="tech-card reveal">
+              <h3>Mobile app</h3>
+              <p>Cross-platform client for capture, scores, and history.</p>
+              <div class="tech-chips">
+                <span>React Native</span>
+                <span>Expo</span>
+                <span>Expo Router</span>
+                <span>TypeScript</span>
+                <span>Firebase Auth</span>
+                <span>Cloud Firestore</span>
+                <span>expo-av</span>
+                <span>expo-image-picker</span>
+              </div>
+            </article>
+
+            <article class="tech-card reveal">
+              <h3>Voice ML</h3>
+              <p>Audio features plus an ensemble classifier for risk scoring.</p>
+              <div class="tech-chips">
+                <span>Python</span>
+                <span>FastAPI</span>
+                <span>Uvicorn</span>
+                <span>scikit-learn</span>
+                <span>Random Forest</span>
+                <span>HistGradientBoosting</span>
+                <span>librosa</span>
+                <span>Praat / Parselmouth</span>
+                <span>NumPy</span>
+                <span>Pandas</span>
+                <span>joblib</span>
+              </div>
+            </article>
+
+            <article class="tech-card reveal">
+              <h3>Image DL</h3>
+              <p>Tissue-class prediction from laryngeal images.</p>
+              <div class="tech-chips">
+                <span>Python</span>
+                <span>TensorFlow / Keras</span>
+                <span>EfficientNetB0</span>
+                <span>FastAPI</span>
+                <span>Uvicorn</span>
+                <span>Pillow</span>
+                <span>OpenCV</span>
+                <span>NumPy</span>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -412,8 +457,7 @@
           </div>
         </div>
         <p class="footer-copy">
-          © <span id="year"></span> Final Year Project.
-          <a href="mailto:habdulrehman215@gmail.com">habdulrehman215@gmail.com</a>
+          © <span id="year"></span> Final Year Project · Built for research and education.
         </p>
       </div>
     </footer>
